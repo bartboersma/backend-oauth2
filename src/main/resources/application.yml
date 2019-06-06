@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: 667849740352672
+            clientSecret: e365843815318d4b03438f9bc60ccd55
+        provider:
+          facebook:
+            authorizationUri: https://www.facebook.com/dialog/oauth
+            tokenUri: https://graph.facebook.com/oauth/access_token
+            userInfoUri: https://graph.facebook.com/me?fields=id,name,email
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+
